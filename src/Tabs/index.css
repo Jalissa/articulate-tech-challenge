@@ -1,0 +1,191 @@
+.tabs {
+  display: flex;
+  padding: 0 1em 0 1em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1024px;
+  width: 55rem;
+  margin: 0 auto;
+  color: #313537;
+}
+
+.tabs__container {
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 0 0.4rem 1.2rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+
+.tabs__header-titles-container {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  font-family: 'Verdana', sans-serif;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.tabs__header {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 12px;
+  height: 100%;
+  min-height: 3em;
+  min-width: 20%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tabs__header:hover {
+  background: #efefef;
+}
+
+.tabs__header--active {
+  cursor: unset;
+  background: transparent;
+  border-bottom: 1px transparent;
+  color: #747a7e;
+}
+
+.tabs__header--active:hover {
+  background: transparent;
+}
+
+.tabs__content {
+  padding: 2.5em;
+  text-align: justify;
+  font-family: 'Tahoma', sans-serif;
+  color: #747a7e;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  display: none;
+}
+
+.show {
+  display: block;
+  opacity: 0.1;
+}
+
+.tabs__content--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tabs__content__media-container {
+  margin-top: 1em;
+}
+
+.tabs__content__media {
+  max-width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.open {
+  opacity: 1 !important;
+}
+
+.modal__media {
+  cursor: zoom-out;
+  max-width: 65%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.tabs__controls-container {
+  overflow: hidden;
+}
+.tabs__controls-container:before,
+.tabs__controls-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 8rem;
+  width: 0.4rem;
+  opacity: 1;
+}
+
+.tabs__controls__arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.8rem;
+  min-width: 0.4rem;
+  top: 8px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  border-radius: 0.3rem;
+  background: #50abf1;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tabs__controls__arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tabs__controls__arrow--next {
+  right: 0.6em;
+}
+
+.tabs__controls__arrow--prev {
+  left: 0.6em;
+}
+
+.tabs__header-container:hover .tabs__controls__arrow:not(.hidden) {
+  opacity: 1;
+}
+
+.tabs__header-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.tabs__controls-container:before {
+  left: 0;
+  background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
+}
+
+.tabs__controls-container:after {
+  right: 0;
+  background: linear-gradient(270deg, #fff 0, hsla(0, 0%, 100%, 0));
+}
+
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .modal__media {
+    max-width: 100%;
+  }
+}
