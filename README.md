@@ -1,6 +1,6 @@
 ## Jalissa's Custom Tabs
 
-Open [this link](https://jalissas-tabs-for-articulate.surge.sh) to view it in the browser.
+Open [this link](https://articulate-tech-challenge.jalissa.vercel.app) to view it in the browser.
 
 If you want to run it locally:
 
