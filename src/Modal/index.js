@@ -16,7 +16,7 @@ export default function Modal(props) {
       requestAnimationFrame(() => {
         el.classList.add('open');
       });
-    }, 200);
+    }, 10);
 
     return () => {
       requestAnimationFrame(() => {

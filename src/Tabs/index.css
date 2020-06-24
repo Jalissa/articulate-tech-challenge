@@ -41,7 +41,7 @@
   cursor: pointer;
   vertical-align: middle;
   font-size: 12px;
-  height: 100%;
+  height: 3em;
   min-height: 3em;
   min-width: 20%;
   text-transform: uppercase;
@@ -129,7 +129,7 @@
   content: '';
   position: absolute;
   top: 0;
-  height: 4em;
+  height: 6em;
   min-width: 1em;
   opacity: 1;
 }
@@ -186,5 +186,25 @@
 @media screen and (orientation: portrait) and (max-width: 768px) {
   .modal__media {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs__content {
+    padding: 2em;
+    text-align: left;
+  }
+
+  .tabs__header {
+    height: 5em;
+    min-height: 5em;
+    min-width: 30%;
+  }
+}
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+  .tabs__controls__arrow {
+    display: none;
   }
 }
