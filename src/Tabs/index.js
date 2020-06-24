@@ -88,7 +88,7 @@ export default function Tabs({ tabs }) {
           ))}
         </div>
       </div>
-      {zoomedMedia ? <TabMedia show={true} onClose={zoomMediaOut} zoomedMedia={zoomedMedia}></TabMedia> : null}
+      {zoomedMedia ? <TabMedia onClose={zoomMediaOut} zoomedMedia={zoomedMedia}></TabMedia> : null}
     </Fragment>
   );
 }
